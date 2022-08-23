@@ -1,0 +1,25 @@
+function beside2(n, rune){
+            return n ===1
+                  ? random_color(rune)
+                  : beside_frac(1/n, random_color(rune),beside2(n-1,rune));
+}
+
+
+
+function randomly_colored_carpet(n, m, rune) {
+       return m===1
+              ? beside2(n,rune)
+              : stack_frac(1/m, beside2(n,rune),
+                            randomly_colored_carpet(n,m-1,rune));
+}
+        
+
+show(randomly_colored_carpet(7, 5, heart));
+
+
+
+
+
+
+
+
