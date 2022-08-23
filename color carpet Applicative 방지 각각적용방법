@@ -1,3 +1,5 @@
+import {random_color, beside_frac, stack_frac, show, heart} from "rune";
+
 function beside2(n, rune){
             return n ===1
                   ? random_color(rune)
