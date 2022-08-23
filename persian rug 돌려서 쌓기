@@ -14,10 +14,23 @@ function persian (rune , count) {
                     (stackn((count-1), rune )))))));
 }
 
-show(persian(heart,7));
+//show(persian(heart,5));
 
 
-
+show( beside_frac(1/5, (stackn(5, heart)),
+    quarter_turn_right(
+        beside_frac(1/5,
+                   stackn(4,quarter_turn_left(heart)),
+                   quarter_turn_left(beside_frac(3/4, 
+                                     stack_frac(3/4,make_cross(heart),
+                                     quarter_turn_right(stackn(3,quarter_turn_left(heart))) ),
+                       stackn(4,heart))))
+                      
+                      
+                      
+                      
+                      
+                      )));
 
 
 
