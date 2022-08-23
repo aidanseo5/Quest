@@ -1,14 +1,20 @@
-import {circle,square, ribbon, blank, quarter_turn_right,red, sail, show, heart, rcross, stack, stackn, stack_frac, quarter_turn_left, beside,beside_frac} from "rune";
+import {circle,make_cross, square, ribbon, blank, quarter_turn_right,red, sail, show, heart, rcross, stack, stackn, stack_frac, quarter_turn_left, beside,beside_frac} from "rune";
 
 
 function persian (rune , count) {
     return beside_frac(1/count, (stackn(count, rune)),
         quarter_turn_right(
             beside_frac(1/count, 
-                stackn(count-1, quarter_turn_left(rune)))))
+                stackn(count-1, quarter_turn_left(rune)),
+                quarter_turn_left(beside_frac((count-2)/(count-1),
+                    stack_frac((count-2)/(count-1),
+                        make_cross(rune),
+                        quarter_turn_left(stackn((count-2),
+                        quarter_turn_right(rune)))),
+                    (stackn((count-1), rune )))))));
 }
 
-
+show(persian(heart,7));
 
 
 
