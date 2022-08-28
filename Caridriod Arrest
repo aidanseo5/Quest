@@ -16,8 +16,6 @@ const draw_times_table = (m,n) =>
     
 draw_times_table(395, 100);
 
-//// 개간지
-
 
 
 
